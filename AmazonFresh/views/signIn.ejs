@@ -36,8 +36,7 @@
 			url:'/session'
 		}).then(function(res){
 			if(res.data.status == "200"){
-				
-				//alert("Nitesh");
+
 				if(res.data.signInAs == "admin"){
 					$window.location.href = '/adminHome';
 				}
