@@ -29,8 +29,7 @@ function session(req,res){
 }
 
 function sessionEnd(req,res){
-	
-	console.log("/////////////////////////////Nitesh Wadhwa ///////////////////////");
+
 	if(req.session.data){
 		console.log("Session Exists..Destroying Session");
 		req.session.destroy();
