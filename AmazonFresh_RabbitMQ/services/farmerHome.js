@@ -22,7 +22,6 @@ var mongoURL = "mongodb://localhost:27017/AmazonFresh";
 
 //function userSignIn(msg, callback){
 //	
-//	console.log("nitesh");
 //	mongo.connect(mongoURL, function(){
 //		console.log('Connected to mongo at: ' + mongoURL);
 //		
@@ -251,7 +250,6 @@ function farmerGetProductDetails(msg, callback){
 //		
 //		coll1.update({"fKey":msg.fKey,"pID":parseInt(msg.pID)},{ $set: {"pName": msg.pName, "pPrice":msg.pPrice, "pDesc": msg.pDesc, "pImage":msg.pImage}}, function(err, user){
 //			if(user){
-//				console.log("Nitesh");
 //				var result={"status":"200","msg":"Product Details updated Sucessfully"};
 //				callback(result);
 //			}else{
@@ -274,7 +272,6 @@ function updateProduct(msg,callback){
 		
 		coll1.update({"fKey":msg.fKey,"pID":parseInt(msg.pID)},{ $set: {"pName": msg.pName, "pPrice":msg.pPrice, "pDesc": msg.pDesc, "pImage":msg.pImage}}, function(err, user){
 			if(user){
-				console.log("Nitesh");
 				var result={"status":"200","msg":"Product Details updated Sucessfully"};
 				callback(result);
 			}else{
@@ -292,10 +289,8 @@ function updateProduct(msg,callback){
 
 
 function handle_request(msg, callback){
-	
-	console.log("nitesh wadhwa in handle_request");
+
 	if(msg.methodName == "farmerDetails"){
-		console.log("nitesh wadhwa in userSignIn");
 		farmerDetails(msg,function(result){
 			callback(null,result);
 		});
