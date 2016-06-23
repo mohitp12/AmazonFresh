@@ -8,8 +8,7 @@ function getEncrypt (password) {
 }
 
 function userSignIn(msg, callback){
-	
-	console.log("nitesh");
+
 	mongo.connect(mongoURL, function(){
 		console.log('Connected to mongo at: ' + mongoURL);
 		
@@ -120,10 +119,8 @@ function customerSignUp(msg, callback){
 
 
 function handle_request(msg, callback){
-	
-	console.log("nitesh wadhwa in handle_request");
+
 	if(msg.methodName == "userSignIn"){
-		console.log("nitesh wadhwa in userSignIn");
 		userSignIn(msg,function(result){
 			callback(null,result);
 		});
