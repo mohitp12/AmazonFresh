@@ -39,7 +39,7 @@
 		color: #232323 !important;
 	   }
 	</style>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKFu5RJEbw7m_TNta9p2aZqwzP0Dq801M&signed_in=true&callback=initMap" async defer></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=**your googlemaps api key**&signed_in=true&callback=initMap" async defer></script>
 
 <script>
 
@@ -92,7 +92,7 @@ adminPage.controller('adminPage', function($scope,$http,$window){
 	}); 
 	 
 	 $scope.logout = function(){
-		 	//alert("nitesh");
+		 
 			$http({
 				method:'get',
 				url:'/sessionEnd'
