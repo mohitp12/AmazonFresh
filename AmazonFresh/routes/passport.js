@@ -9,8 +9,6 @@ var loginDatabase = "mongodb://localhost:27017/AmazonFresh";
 
 module.exports = function(passport) {
     passport.use('userSignInAdmin', new LocalStrategy(function(username,password,done) {
-
-    	console.log("nitesh wadhwa");
     	
     	var encryptPassword = crypto.createHash("md5").update(password).digest('hex');
     	
@@ -36,8 +34,6 @@ module.exports = function(passport) {
     }));
     
     passport.use('userSignInCustomer', new LocalStrategy(function(username,password,done) {
-
-    	console.log("nitesh wadhwa");
     	
     	var encryptPassword = crypto.createHash("md5").update(password).digest('hex');
     	
@@ -64,8 +60,6 @@ module.exports = function(passport) {
     }));
     
     passport.use('userSignInFarmer', new LocalStrategy(function(username,password,done) {
-
-    	console.log("nitesh wadhwa");
     	
     	var encryptPassword = crypto.createHash("md5").update(password).digest('hex');
     	
