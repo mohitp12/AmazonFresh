@@ -12,7 +12,6 @@ function farmerHome(req,res){
 
 function farmerDetails(req,res){
 	
-console.log("nitesh");	
 console.log(req.session.data.key);
 if(req.session.data){
 		
